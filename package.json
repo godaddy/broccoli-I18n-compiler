@@ -1,0 +1,47 @@
+{
+  "name": "broccoli-i18n-compiler",
+  "description": "i18n compiler plugin for Broccoli",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dave Laird",
+    "email": "dlaird@godaddy.com"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "broccoli-i18n-compiler"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "mocha ./test/test.js",
+    "test:debug": "mocha debug",
+    "lint": "godaddy-js-style-lint ./**.*js"
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "ember",
+    "ember-i18n",
+    "flat language structure"
+  ],
+  "dependencies": {
+    "broccoli-export-tree": "^0.3.2",
+    "broccoli-writer": "^0.1.1",
+    "mkdirp": "^0.3.5",
+    "moment": "^2.8.4"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/godaddy/broccoli-i18n-compiler/issues"
+  },
+  "homepage": "https://github.com/godaddy/broccoli-i18n-compiler",
+  "devDependencies": {
+    "broccoli": "^0.13.1",
+    "chai": "^3.5.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-mocha": "^2.0.0",
+    "godaddy-style": "^3.1.3",
+    "jscs": "^2.11.0",
+    "mocha": "^2.4.5"
+  }
+}
