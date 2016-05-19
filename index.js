@@ -52,10 +52,11 @@ function processFile(string, file) {
   var out = '';
 
   // Ember i18n translations
-  out += 'Ember.I18n = Ember.I18n || {};\n';
-  out += 'Ember.I18n.locale = \'' + locale + '\';\n';
-  out += 'Ember.I18n.translations = Ember.I18n.translations || {};\n';
-  out += 'Ember.I18n.translations = _.extend(Ember.I18n.translations, ';
+  out += 'if(typeof Translations === \'undefined\') {\n'
+  out += '  var Translations = {} };\n'
+  out += 'Translations.locale = \'' + locale + '\';\n';
+  out += 'Translations.translations = Translations.translations || {};\n';
+  out += 'Translations.translations = _.extend(Translations.translations, ';
   out += string + ');\n';
 
   return out;
