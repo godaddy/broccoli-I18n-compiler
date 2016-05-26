@@ -1,7 +1,7 @@
-Ember.I18n = Ember.I18n || {};
-Ember.I18n.locale = 'en';
-Ember.I18n.translations = Ember.I18n.translations || {};
-Ember.I18n.translations = _.extend(Ember.I18n.translations, {
+if(typeof Translations === 'undefined') { var Translations = {} };
+Translations.locale = 'en';
+Translations.translations = Translations.translations || {};
+Translations.translations = _.extend(Translations.translations, {
   "totally": "Dude",
   "good": "On Ya"
 }
