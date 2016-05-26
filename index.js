@@ -52,8 +52,7 @@ function processFile(string, file) {
   var out = '';
 
   // Ember i18n translations
-  out += 'if(typeof Translations === \'undefined\') {\n'
-  out += '  var Translations = {} };\n'
+  out += 'if(typeof Translations === \'undefined\') { var Translations = {} };\n'
   out += 'Translations.locale = \'' + locale + '\';\n';
   out += 'Translations.translations = Translations.translations || {};\n';
   out += 'Translations.translations = _.extend(Translations.translations, ';
