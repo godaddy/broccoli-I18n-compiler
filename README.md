@@ -9,12 +9,12 @@ You should end up with js files: `i18n-en.js` and `i18n-pt-BR.js`
 
 #### Example Output
 ```
-CLDR.defaultLanguage = 'da';
-Ember.I18n = Ember.I18n || { };
-Ember.I18n.translations = Ember.I18n.translations || { };
-Ember.I18n.translations = _.extend(Ember.I18n.translations, {
-  "app.title": "Min konto",
-  "app.menu.accountAccess": "Adgang til konto"
+if(typeof Translations === 'undefined') { var Translations = {} };
+Translations.locale = 'da';
+Translations.translations = Translations.translations || {};
+Translations.translations = _.extend(Translations.translations, {
+  "totally": "Kerl",
+  "good": "Wir sind"
 
   ... removed for brevity
 
@@ -47,3 +47,13 @@ Options avaliable: `outputFolder`
 ```js
 var appTranslations = emberI18nPrecompile("i18n", {outputFolder: 'js'});
 ```
+
+## Testing
+
+```
+npm test
+```
+
+### How do I contribute?
+
+Fork this repository and submit a pull request.

@@ -18,9 +18,9 @@ function readFileSync() {
   return fs.readFileSync.apply(this, arguments).replace(/\r\n/g, '\n');
 }
 
-describe('compile JSON langauge files into Ember I18n format', function () {
+describe('compile JSON language files into Ember I18n format', function () {
 
-  it('into english has no moment translation', function (done) {
+  it('into english', function (done) {
     var tree = i18nCompiler(fixturePath, {
       outputFolder: 'js'
     });
@@ -36,7 +36,7 @@ describe('compile JSON langauge files into Ember I18n format', function () {
     });
   });
 
-  it('into german has german with moments translation', function (done) {
+  it('into german', function (done) {
     var tree = i18nCompiler(fixturePath, {
       outputFolder: 'js'
     });
